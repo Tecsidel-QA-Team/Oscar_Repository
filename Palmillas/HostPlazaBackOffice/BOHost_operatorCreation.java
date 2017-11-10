@@ -58,13 +58,13 @@ public class BOHost_operatorCreation extends Settingsfields_File {
 @Test
 public void crearOperadores() throws Exception {
 	Actions action = new Actions(driver);	
-	borrarArchivosTemp("E:\\workspace\\OscarRepository\\BOHost_crearOperadores\\attachments\\");
+	borrarArchivosTemp("E:\\workspace\\Oscar_Repository\\BOHost_crearOperadores\\attachments\\");
 	try{
 		driver.get(BoHostUrl);
 		takeScreenShot("E:\\Selenium\\","loginBOPage"+timet+".jpg");
 		takeScreenShot("E:\\workspace\\Oscar_Repository\\BOHost_crearOperadores\\attachments\\","loginBOPage.jpg");
 		loginPage("00001","00001");
-		takeScreenShot("E:\\Selenium\\","homeBOPage"+timet+".jpg");
+		takeScreenShot("E:\\Selenium\\","homeBOVHPage"+timet+".jpg");
 		takeScreenShot("E:\\workspace\\Oscar_Repository\\BOHost_crearOperadores\\attachments\\","homeBOPage.jpg");
 		BOVersion = driver.findElement(By.id("ctl00_statusRight")).getText();
 		Thread.sleep(2000);					
@@ -140,7 +140,7 @@ public void crearOperadores() throws Exception {
 		System.out.println("Se ha Creado el operador "+Operator+" con la contraseaña: "+Operator+ " en el grupo de "+operatorG.substring(04));
 		System.out.println("Se ha probado en la versión del BO Host: " + BOVersion.substring(1,7)+" y Host Manager: "+BOVersion.substring(8));
 		takeScreenShot("E:\\Selenium\\","userCreatedscreenHome"+timet+".jpg");
-		takeScreenShot("E:\\workspace\\Maria_Repository\\BOHost_crearOperadores\\attachments\\","userCreatedscreenHome.jpg");
+		takeScreenShot("E:\\workspace\\Oscar_Repository\\BOHost_crearOperadores\\attachments\\","userCreatedscreenHome.jpg");
 		Thread.sleep(10000);
 		String connectionUrlPlaza = "jdbc:sqlserver://172.18.130.188:1433;DataBaseName=PALMILLAS_QA_TOLLPLAZA"; //+ "user=sa; password=lediscet";//" + "user=SENEGAL_QA_TOLLHOST; password=USRTOLLHOST";
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
